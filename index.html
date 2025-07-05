@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVOZ: Tired Together. Evolved Forever.</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    .hero-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+    .background-slider {
+      position: absolute;
+      width: 600%;
+      height: 100%;
+      display: flex;
+      animation: slide 36s infinite linear;
+    }
+    .background-slider img {
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0 20px;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 30px auto;
+    }
+    .hero-content a {
+      padding: 12px 24px;
+      background-color: #00ffff;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      16.66% { transform: translateX(0); }
+      33.32% { transform: translateX(-100vw); }
+      49.98% { transform: translateX(-200vw); }
+      66.64% { transform: translateX(-300vw); }
+      83.30% { transform: translateX(-400vw); }
+      100% { transform: translateX(-500vw); }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-container">
+    <div class="background-slider">
+      <img src="nft1.jpg" alt="EVOZ 1">
+      <img src="nft2.jpg" alt="EVOZ 2">
+      <img src="nft3.jpg" alt="EVOZ 3">
+      <img src="nft4.jpg" alt="EVOZ 4">
+      <img src="nft5.jpg" alt="EVOZ 5">
+      <img src="nft6.jpg" alt="EVOZ 6">
+    </div>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>EVOZ: Tired Together. Evolved Forever.</h1>
+      <p>We’ve been through cycles, rugs, pumps, dumps, delays, hacks, mints, more mints, and airdrops that never came… and we’re still here.</p>
+      <a href="https://x.com/evozhl_" target="_blank">Follow on X</a>
+    </div>
+  </div>
+</body>
+</html>
