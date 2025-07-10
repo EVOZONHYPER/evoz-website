@@ -1,99 +1,202 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EVOZ: Tired Together. Evolved Forever.</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body, html {
-      height: 100%;
-      font-family: Arial, sans-serif;
-      overflow: hidden;
-    }
-    .hero-container {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-    }
-    .background-slider {
-      position: absolute;
-      width: 600%;
-      height: 100%;
-      display: flex;
-      animation: slide 36s infinite linear;
-    }
-    .background-slider img {
-      width: 100vw;
-      height: 100%;
-      object-fit: cover;
-    }
-    .overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 1;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      color: white;
-      text-align: center;
-      top: 50%;
-      transform: translateY(-50%);
-      padding: 0 20px;
-    }
-    .hero-content h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-    .hero-content p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto 30px auto;
-    }
-    .hero-content a {
-      padding: 12px 24px;
-      background-color: #00ffff;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      16.66% { transform: translateX(0); }
-      33.32% { transform: translateX(-100vw); }
-      49.98% { transform: translateX(-200vw); }
-      66.64% { transform: translateX(-300vw); }
-      83.30% { transform: translateX(-400vw); }
-      100% { transform: translateX(-500vw); }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EVOZ: Tired Together. Evolved Forever.</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="hero-container">
-    <div class="background-slider">
-      <img src="nft1.jpg" alt="EVOZ 1">
-      <img src="nft2.jpg" alt="EVOZ 2">
-      <img src="nft3.jpg" alt="EVOZ 3">
-      <img src="nft4.jpg" alt="EVOZ 4">
-      <img src="nft5.jpg" alt="EVOZ 5">
-      <img src="nft6.jpg" alt="EVOZ 6">
-    </div>
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>EVOZ: Tired Together. Evolved Forever.</h1>
-      <p>We’ve been through cycles, rugs, pumps, dumps, delays, hacks, mints, more mints, and airdrops that never came… and we’re still here.</p>
-      <a href="https://x.com/evozhl_" target="_blank">Follow on X</a>
-    </div>
+
+  
+
+  <!-- Storyline Overlay -->
+<div id="storylineOverlay" class="storyline-overlay" style="display: none;">
+  <div class="storyline-content">
+    <button onclick="document.getElementById('storylineOverlay').style.display='none'">Close</button>
+
+    <h1>🧠 EVOZ: Tired Together. Evolved Forever.</h1>
+    <p>We’ve endured it all — rugs, pumps, dumps, delays, hacks, failed launches, gas wars, mint droughts, influencer silence, and broken roadmaps. And somehow, we’re still here.</p>
+    <p><strong>Not by luck. Not by timing.</strong></p>
+    <p><strong>By evolution.</strong></p>
+
+    <!-- Continue full storyline here -->
+
+
+  <h2>🧾 The EVOZ Timeline — From Fresh to Finished</h2>
+  <p>We entered this space clean.</p>
+  <p>Lean wallets. Wide eyes. Fresh shirts.<br>
+  No scars. No bags. Just ambition and whitepaper faith.<br>
+  Every mint felt like the beginning of something massive.</p>
+  <p>Then came the bulking phase.</p>
+  <p>Every mint became a meal. Hopium was the main course.<br>
+  We chased trends. WL spots. Some alpha fed us. Some poisoned us.</p>
+  <p>Then came the lean season.</p>
+  <p>Shirts torn. Wallets dry. Eyes sunken.<br>
+  Gas fees mocked us. JPEGs drowned us. Discords muted us.</p>
+  <p>And our heads?</p>
+  <p>Some inflated with attention. Others cracked under collapse.<br>
+  We weren’t fresh anymore. We were forged.</p>
+
+  <hr>
+
+  <h2>🔥 What Web3 Does to You — If You Stay Long Enough</h2>
+  <ul>
+    <li>Got rugged and still minted the next day 🧨</li>
+    <li>Slept through the night… with Discord pings ON 🛌</li>
+    <li>Ate dopamine and doubt for breakfast ☕</li>
+    <li>Held JPEGs through 3 cycles and 2 heartbreaks</li>
+    <li>Woke up to a -95% floor and still tweeted “GM”</li>
+    <li>Lost gas fees, patience, and entire friend groups</li>
+    <li>Built a tool just to feel useful</li>
+    <li><strong>Refreshed http://Drip.Trade and OpenSea like they were medical apps</strong></li>
+  </ul>
+  <p>We were degen. We became digital fossils.</p>
+
+  <hr>
+
+  <h2>🧬 This Is EVOZ</h2>
+  <p>Not a concept. A condition.<br>
+  A visible evolution of everyone who stayed.<br>
+  Every fur, every trait, every wrinkle — earned.<br>
+  This collection is your digital reflection: tired, torn, but still minting.</p>
+
+  <hr>
+
+  <h2>✊ Scarred, Shrunk & Still Standing</h2>
+  <ul>
+    <li>Rugged and left refunded in trauma</li>
+    <li>Betrayed by “devs” we once called brothers</li>
+    <li>Burned out by tools that “almost launched”</li>
+    <li>Forgotten by influencers who promised WL spots</li>
+    <li>Changed — permanently — by the chain</li>
+  </ul>
+  <p>Even our shirts told the story — sun-faded, torn, stretched thin.<br>
+  We didn’t chase fashion. We wore survival.</p>
+
+  <hr>
+
+  <h2>🔥 Expressions from the Trenches</h2>
+  <ul>
+    <li>Blank stares after another failed mint</li>
+    <li>Dead eyes from watching charts nosedive 📉</li>
+    <li>Wry smiles pretending we weren’t down bad 🙃</li>
+    <li>Brows raised in disbelief… again</li>
+    <li>Still clicked anyway</li>
+    <li>Indifference — not peace, but exhaustion</li>
+  </ul>
+
+  <hr>
+
+  <h2>🧬 8 FUR BLOODLINES — 8 SURVIVAL TYPES</h2>
+  <ul>
+    <li>🧟 <strong>Zombie Fur</strong>: Minted everything. Soul empty. Doesn’t flinch.</li>
+    <li>🧪 <strong>Toxic Mutant</strong>: Still glowing from past rugs. Sarcastic glitches.</li>
+    <li>🦾 <strong>Half Cyborg</strong>: Half code, half burnout. Built too long, felt too much.</li>
+    <li>🌌 <strong>Cosmic Glow</strong>: Mentally unplugged. Lives in chainspace.</li>
+    <li>🧊 <strong>Smooth Light</strong>: Glows like he never lost a bag.</li>
+    <li>🪸 <strong>Coral Reef</strong>: Buried in bags, smiling anyway.</li>
+    <li>🦍 <strong>Golden Fur</strong>: Touched the bull. Flexes through PTSD.</li>
+    <li>⚙️ <strong>Cybernetic Core</strong>: Cold wallet. Cold soul.</li>
+  </ul>
+
+  <hr>
+
+  <h2>🧢 Outfit Decay — From Flex to Fossil</h2>
+  <p>Our fits became battle flags:<br>
+  Stitch lines stretched. Logos faded. Tears told stories.<br>
+  We wore the market — and it wore us back.</p>
+
+  <hr>
+
+  <h2>✊ EVOZ Isn’t Just an NFT</h2>
+  <p>It’s the stare after the fifth rug.<br>
+  The smirk when a mint sells out without you.<br>
+  The posture of someone who lived through 100 raffles — and lost.</p>
+  <p>This isn’t hype. This is history.</p>
+
+  <hr>
+
+  <h2>🧬 2000 EVOZ — MUTATED. NOT DEFEATED.</h2>
+  <ul>
+    <li>Worn down but still minting</li>
+    <li>Cold inside, warm on the chain</li>
+    <li>Built not just for hype, but for survival</li>
+  </ul>
+  <p>This space didn’t kill us.<br>
+  It transformed us.</p>
+  <h3 style="text-align: center;">Tired together. Evolved forever.<br>
+  Evolve to remember. Evolve to survive. Evolve to EVOZ.</h3>
+</div>
+    <button onclick="closeStoryline()">Close</button>
   </div>
-</body>
-</html>
+</div>
+
+<div id="hype-price-pill">
+  <img src="images/hyperliquid-logo.png" alt="Hyperliquid Logo" class="pill-logo" />
+  <span id="hype-price-text">$HYPE: ...</span>
+</div>
+
+  <script src="js/script.js"></script>
+
+  
+
+<!-- MENU PANEL -->
+<div class="menu-nix-panel">
+<ul>
+<li><a href="#" onclick="showStoryline()">Storyline</a>Storyline</li>
+<li><a href="#" onclick="showUtilities()" Utilities</a>Utilities</li>
+<li><a href="https://x.com/evozhl_?s=21" target="_blank">Follow on X</a></li>
+</ul>
+</div>
+
+<!-- MENU NIX ICON -->
+
+<div class="menu-nix" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+
+<!-- Background scroll script-->
+ <div class="slider">
+ <div class="scroll-track">
+<img src="images/nft1.png" alt="NFT 1" />
+<img src="images/nft2.png" alt="NFT 2" />
+<img src="images/nft3.png" alt="NFT 3" />
+<img src="images/nft4.png" alt="NFT 4" />
+<img src="images/nft5.png" alt="NFT 5" />
+<img src="images/nft6.png" alt="NFT 6" />
+<!--Repeat same images for seamless loop -->
+<img src="images/nft1.png" alt="NFT 1 duplicate" />
+<img src="images/nft2.png" alt="NFT 2 duplicate" />
+<img src="images/nft3.png" alt="NFT 3 duplicate" />
+<img src="images/nft4.png" alt="NFT 4 duplicate" />
+<img src="images/nft5.png" alt="NFT 5 duplicate" />
+<img src="images/nft6.png" alt="NFT 6 duplicate" />
+</div>
+</div>
+
+
+<!-- Text Overlay -->
+
+<div class="centered-text">
+  <h1 id="headline"></h1>
+</div>
+
+<!-- Utilities Overlay -->
+<div id="utilitiesOverlay" class="utilities-overlay" style="display: none;">
+  <div class="utilities-content">
+    <h2 class="coming-soon-text">COMING SOON!</h2>
+
+     <!--Cancel Button-->
+    <button onclick="closeUtilitiesAndOpenMenu()">Close</button>
+  </div>
+</div>
+
+
+<div class="footer-overlay">
+  <p class="footer-text">Inspired by the Trenches.<br>© EVOZ 2025</p>
+</div>
