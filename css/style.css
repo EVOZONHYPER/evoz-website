@@ -524,3 +524,79 @@ font-size: 18px;
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
 }
+
+/* --- MOBILE RESPONSIVE FIXES --- */
+@media
+ (max-width: 768px) {
+  #hype-price-pill {
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px;
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .pill-logo {
+    height: 12px;
+  }
+
+  h1, h2, h3 {
+    font-size: 22px !important;
+    line-height: 1.2em;
+  }
+
+  .storyline-content p {
+    font-size: 14px;
+  }
+
+  .sliding-background {
+    flex-direction: column;
+    gap: 0;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .sliding-background img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* --- MOBILE RESPONSIVE FIXES --- */
+@media
+ (max-width: 768px) {
+  #hype-price-pill {
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px;
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .pill-logo {
+    height: 12px;
+  }
+
+  h1, h2, h3 {
+    font-size: 22px !important;
+    line-height: 1.2em;
+  }
+
+  .storyline-content p {
+    font-size: 14px;
+  }
+
+  .sliding-background {
+    flex-direction: column;
+    gap: 0;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .sliding-background img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
