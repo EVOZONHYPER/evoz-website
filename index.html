@@ -15,8 +15,11 @@
 <div id="storylineOverlay" class="storyline-overlay" style="display: none;">
   <div class="storyline-content">
     <button onclick="document.getElementById('storylineOverlay').style.display='none'">Close</button>
+      <div class="homepage-headline-wrapper">
+      <div class="capsule headline-capsule">
+    <h1 id="typing-text">EVOZ: Tired Together. Evolved Forever.</h1>
+      </div>
 
-    <h1>🧠 EVOZ: Tired Together. Evolved Forever.</h1>
     <p>We’ve endured it all — rugs, pumps, dumps, delays, hacks, failed launches, gas wars, mint droughts, influencer silence, and broken roadmaps. And somehow, we’re still here.</p>
     <p><strong>Not by luck. Not by timing.</strong></p>
     <p><strong>By evolution.</strong></p>
@@ -133,10 +136,24 @@
   </div>
 </div>
 
+
 <div id="hype-price-pill">
   <img src="images/hyperliquid-logo.png" alt="Hyperliquid Logo" class="pill-logo" />
   <span id="hype-price-text">$HYPE: ...</span>
 </div>
+<script>
+  let fakePrice = 45.00;
+
+  function updateFakeHypePrice() {
+    const move = (Math.random() - 0.5) * 0.3; // +/- $0.15 range
+    fakePrice = Math.max(0, fakePrice + move);
+    document.getElementById("hype-price-text").textContent = `$HYPE: $${fakePrice.toFixed(2)}`;
+  }
+
+  updateFakeHypePrice();
+  setInterval(updateFakeHypePrice, 10000); // update every 10 seconds
+</script>
+
 
   <script src="js/script.js"></script>
 
@@ -198,5 +215,6 @@
 
 
 <div class="footer-overlay">
+  <div class="capsule footer-capsule">
   <p class="footer-text">Inspired by the Trenches.<br>© EVOZ 2025</p>
 </div>

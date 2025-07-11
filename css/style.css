@@ -63,7 +63,7 @@ transform: translateY(-10px) rotate(-45deg);
 
 /* NFT Strip */
 .scroll-container {
-width: 100%;
+width: 100vw;
 height: 100vh;
 overflow: hidden;
 top: 0;
@@ -234,7 +234,7 @@ font-size: 18px;
 
 .scroll-container {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -282,10 +282,86 @@ font-size: 18px;
 }
 
 .footer-text {
-  font-size: 12px;
+  font-size: 14px;
   color: white;
   opacity: 0.8;
   margin: 0;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* 🔋 Capsule style for homepage headline */
+.capsule.homepage-headline {
+  background-color: rgba(0, 255, 153, 0.25);
+  border: 2px solid #00ff99;
+  border-radius: 50px;
+  padding: 16px 32px;
+  margin: 30px auto;
+  text-align: center;
+  width: fit-content;
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.4);
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+
+/* 💚 Typing animation */
+#typing-text {
+  color: white;
+  font-size: 2em;
+  font-family: 'Playfair Display', serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #00ff99;
+  width: 100%;
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes
+ typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes
+ blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00ff99 }
+}
+
+@keyframes
+ pulseGlow {
+  0%   { box-shadow: 0 0 10px rgba(0, 255, 153, 0.2); }
+  50%  { box-shadow: 0 0 30px rgba(0, 255, 153, 0.6); }
+  100% { box-shadow: 0 0 10px rgba(0, 255, 153, 0.2); }
+}
+.capsule {
+  background-color: rgba(0, 255, 153, 0.3);  /* transparent mint */
+  border: 2px solid rgba #00ff99;
+  border-radius: 50px;
+  padding: 10px 26px;
+  width: fit-content;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0, 255, 153, 0.4);
+}
+
+.capsule {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes
+ pulseGlow {
+  0% { box-shadow: 0 0 10px rgba(0, 255, 153, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(0, 255, 153, 0.6); }
+  100% { box-shadow: 0 0 10px rgba(0, 255, 153, 0.2); }
+}
+
+.footer-text {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.3px;
 }
 
 .menu-icon {
@@ -598,5 +674,44 @@ font-size: 18px;
     width: 100%;
     height: auto;
     object-fit: contain;
+  }
+}
+
+#typing-text {
+  color: white;
+  font-size: 2em;
+  font-family: 'Playfair Display', serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #00ff99;
+  width: 100%;
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes
+ typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes
+ blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00ff99 }
+}
+
+/* ✅ Remove horizontal scroll from entire page */
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+@media
+ (max-width: 600px) {
+  #hype-price-pill {
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    padding: 6px 16px;
   }
 }

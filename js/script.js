@@ -39,32 +39,32 @@ fetchHypePrice();
 setInterval(fetchHypePrice, 30000); // every 30 seconds
 };
 
-// Live $HYPE price fetcher
+// ✅ Live $HYPE price from Hyperliquid
 async function fetchHypePrice() {
   try {
-    const url = 'https://corsproxy.io/?https://api.dexscreener.com/latest/dex/pairs/solana/3u8E5hQbmMwK9hFQxt1DASPPaohDAibvMT4tkWziTx6F';
-    const response = await fetch(url)
+    const url = "https://api.dexscreener.com/latest/dex/pairs/hyperliquid";
+    const response = await fetch(url);
     const data = await response.json();
 
-    console.log("🔍 HYPE API response:", data); // ← A
+    const hypePair = data.pairs.find(pair => pair.baseToken.symbol === "HYPE");
 
-    const hypeAsset = data.coins?.find(coin => coin.name === 'HYPE');
-
-    if (hypeAsset && hypeAsset.markPrice) {
-      const price = parseFloat(hypeAsset.markPrice).toFixed(2);
-      document.getElementById('hype-price-text').textContent = `$HYPE: ${price}`;
+    if (hypePair && hypePair.priceUsd) {
+      const price = parseFloat(hypePair.priceUsd).toFixed(2);
+      document.getElementById("hype-price-text").textContent = `$HYPE: $${price}`;
     } else {
-      document.getElementById('hype-price-text').textContent = '$HYPE: N/A';
+      document.getElementById("hype-price-text").textContent = "$HYPE: N/A";
     }
   } catch (error) {
-    document.getElementById('hype-price-text').textContent = '$HYPE: Error';
-    console.error('Failed to fetch $HYPE price:', error);
+    console.error("Fetch failed:", error);
+    document.getElementById("hype-price-text").textContent = "$HYPE: Error";
   }
 }
 
-// Fetch price every 30 seconds
+// ✅ Run it every 30 seconds
 fetchHypePrice();
 setInterval(fetchHypePrice, 30000);
+
+
 
 function showUtilities() {
   document.getElementById("utilitiesOverlay").style.display = "flex";
