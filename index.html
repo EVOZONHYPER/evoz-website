@@ -6,8 +6,6 @@
 <title>EVOZ: Tired Together. Evolved Forever.</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
 
   
 
@@ -136,26 +134,9 @@
   </div>
 </div>
 
-
-<div id="hype-price-pill">
-  <img src="images/hyperliquid-logo.png" alt="Hyperliquid Logo" class="pill-logo" />
-  <span id="hype-price-text">$HYPE: ...</span>
-</div>
-<script>
-  let fakePrice = 45.00;
-
-  function updateFakeHypePrice() {
-    const move = (Math.random() - 0.5) * 0.3; // +/- $0.15 range
-    fakePrice = Math.max(0, fakePrice + move);
-    document.getElementById("hype-price-text").textContent = `$HYPE: $${fakePrice.toFixed(2)}`;
-  }
-
-  updateFakeHypePrice();
-  setInterval(updateFakeHypePrice, 10000); // update every 10 seconds
-</script>
-
-
   <script src="js/script.js"></script>
+
+
 
   
 
@@ -197,6 +178,8 @@
 </div>
 
 
+
+
 <!-- Text Overlay -->
 
 <div class="centered-text">
@@ -218,3 +201,112 @@
   <div class="capsule footer-capsule">
   <p class="footer-text">Inspired by the Trenches.<br>© EVOZ 2025</p>
 </div>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EVOZ</title>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Morganite', sans-serif;
+      background-color: #000;
+      overflow: hidden;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slider-strip {
+      display: flex;
+      width: calc(6 * 100vw);
+      height: 100%;
+      animation: slideLeft 40s linear infinite;
+    }
+
+    .slider-strip img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    
+@keyframes
+ slideLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100vw); }
+    }
+
+    /* ✅ LIVE PRICE PILL FLOATING ON BACKGROUND */
+    .hype-price-box {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: rgba(0, 255, 170, 0.2);
+      color: #00ffaa;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-family: monospace;
+      z-index: 10;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ✅ MAIN CONTAINER -->
+  <div class="slider-container">
+
+    <!-- ✅ PRICE PILL (NOW FLOATS OVER IMAGES) -->
+    <div class="hype-price-box">
+      <img src="images/hyperliquid-logo.png" alt="logo" class="logo-icon" />
+       $HYPE: <span id="hype-price">Loading...</span>
+    </div>
+    
+  
+
+  <!-- ✅ FETCH HYPE PRICE -->
+  <script>
+    async function fetchHypePrice() {
+      try {
+        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=hyperliquid&vs_currencies=usd');
+        const data = await res.json();
+        const price = data?.hyperliquid?.usd?.toFixed(2);
+        document.getElementById('hype-price').textContent = price ? `$${price}` : 'N/A';
+      } catch (err) {
+        document.getElementById('hype-price').textContent = 'Error';
+        console.error('Failed to fetch HYPE price:', err);
+      }
+    }
+
+    fetchHypePrice();
+    setInterval(fetchHypePrice, 60000);
+  </script>
+
+</body>
+</html>
+
+<div class="footer-overlay">
+  <div class="capsule footer-capsule">
+  <p class="footer-text">Inspired by the Trenches.<br>© EVOZ 2025</p>
+</div>
+

@@ -715,3 +715,54 @@ body, html {
     padding: 6px 16px;
   }
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.slider-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider-strip {
+  display: flex;
+  width: calc(6 * 100vw); /* only if you have exactly 6 images */
+  height: 100%;
+  animation: slideLeft 40s linear infinite;
+}
+
+.slider-strip img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+
+.hype-price-box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(0, 255, 170, 0.15);
+  color: #00ffaa;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #00ffaa;
+}
+
+.logo-icon {
+  height: 14px;
+  width: 14px;
+  object-fit: contain;
+  display: block;
+}
