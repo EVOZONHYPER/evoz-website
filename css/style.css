@@ -871,6 +871,8 @@ body {
     font-weight: bold;
   }
 
+
+
   @media screen and (max-width: 768px) {
     .storyline-content {
       font-size: 14px;
@@ -878,3 +880,41 @@ body {
     }
 
   }
+
+
+  .section-box {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .section-box {
+    font-size: 14px;
+    padding: 1rem;
+  }
+
+  #price-pill {
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .modal-content {
+    width: 95% !important;
+    padding: 1rem !important;
+    font-size: 14px !important;
+  }
+
+  .two-column {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .two-column > div {
+    width: 100% !important;
+    text-align: center;
+  }
+}
